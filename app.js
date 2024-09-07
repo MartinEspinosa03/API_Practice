@@ -9,9 +9,9 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('api', router);
+app.use('/api', router);
 app.get('/', (req, res) =>{
-    res.send('Base de datos incializada');
+    res.send('Api de Floristería funcionando');
 });
 
 mongoose.connect(process.env.MONGO, {
